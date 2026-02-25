@@ -13,6 +13,7 @@ public class LineHelper {
         }
 
         if (areParallel(line1, line2) && areParallel(line2, line3) &&
+                //дві прямі можуть співпадати, але 3 має бути окремою
                 !(areCoincident(line1, line2) && areCoincident(line2, line3))) {
             return "Прямі не мають спільних точок";
         }

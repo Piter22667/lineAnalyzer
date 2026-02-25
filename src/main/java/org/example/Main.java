@@ -86,11 +86,16 @@ public class Main {
         for (int i = 0; i < expectedCount; i++) {
             result[i] = Double.parseDouble(parts[i]);
 
-            if (result[i] < MIN || result[i] > MAX) {
-                throw new IllegalArgumentException(String.format("Значення %.1f виходить за межі допустимого діапазону [%d; %d].", result[i], MIN, MAX));
-            }
+            validateRange(result[i]);
         }
         return result;
+    }
+
+    public static void validateRange(double value) {
+        if (value < MIN || value > MAX) {
+            throw new IllegalArgumentException(
+                    String.format("Значення %.1f виходить за межі допустимого діапазону [%d; %d].", value, MIN, MAX));
+        }
     }
 
     private static void printErrorAndSolutionMessages(String errorMessage, String solution) {
