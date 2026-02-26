@@ -35,7 +35,7 @@ public class Line {
 
     public static Line fromSlopeAndIntercept(double slope, double intercept){
         if(intercept == 0){
-            throw new IllegalArgumentException("Помилка: вільний коефіцієнт не може бути рівним нулю");
+            throw new IllegalArgumentException("Помилка: вільний коефіцієнт не може бути рівним нулю за умовою завдання.");
         }
 
         double a = slope;

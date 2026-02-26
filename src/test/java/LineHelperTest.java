@@ -94,7 +94,7 @@ class LineHelperTest {
 
         @Test
         //2.всі три прямі - права границя діапазону
-        public void allRightBoundaries_NoCommonPoints() {
+        void allRightBoundaries_NoCommonPoints() {
             Line line1 = Line.fromTwoPoints(-5, 142, 5, 142);
             Line line2 = Line.fromSlopeAndIntercept(0, 143);
             Line line3 = Line.fromPointAndNormal(0, 143, 0, 1);
@@ -105,7 +105,7 @@ class LineHelperTest {
 
         @Test
         //3. всі три прямі типове(середнє ) значення класу
-        public void allAverage_NoCommonPoints() {
+        void allAverage_NoCommonPoints() {
             Line line1 = Line.fromTwoPoints(-10, 0, 10, 0);
             Line line2 = Line.fromSlopeAndIntercept(0, 1);
             Line line3 = Line.fromPointAndNormal(0, -1, 0, 1);
@@ -116,7 +116,7 @@ class LineHelperTest {
 
         @Test
         // 4.одна пряма найближче до лівої, друга - середнє значення, третя - найближче до правої
-        public void left_average_right_NoCommonPoints() {
+        void left_average_right_NoCommonPoints() {
             Line line1 = Line.fromTwoPoints(-100, 0, 100, 0);
             Line line2 = Line.fromSlopeAndIntercept(0, -143);
             Line line3 = Line.fromPointAndNormal(50, 143, 0, 1);
@@ -127,7 +127,7 @@ class LineHelperTest {
 
         @Test
         // 5. дві прямі – найближче до лівої границі та наступне за ним, третьої – типове значення
-        public void twoLeft_oneMiddle_NoCommonPoints() {
+        void twoLeft_oneMiddle_NoCommonPoints() {
             Line line1 = Line.fromTwoPoints(0, -142.5, 10, -142.5);
             Line line2 = Line.fromSlopeAndIntercept(0, -143);
             Line line3 = Line.fromPointAndNormal(0, 0, 0, 1);
@@ -138,7 +138,7 @@ class LineHelperTest {
 
         @Test
         // 6. дві прямих – найближче до правої границі й те, що передує йому, третьої – типове значення
-        public void twoRight_oneMiddle_NoCommonPoints() {
+        void twoRight_oneMiddle_NoCommonPoints() {
             Line line1 = Line.fromTwoPoints(-10, 142.5, -5, 142.5);
             Line line2 = Line.fromSlopeAndIntercept(0, 143);
             Line line3 = Line.fromPointAndNormal(0, 0, 0, 1);
@@ -337,7 +337,7 @@ class LineHelperTest {
             assertEquals(expectedResult(-0.0, -0.0, 1.0, -0.0, -0.0, 1.0), result);
         }
 
-        // 4.одна пряма найближче до лівої, друга - середнє значення, третя - найближче до право
+        // 4.одна пряма найближче до лівої, друга - середнє значення, третя - найближче до правої
         @Test
         void left_average_right_ThreePoints() {
             Line line1 = Line.fromPointAndNormal(-143.0, 10.0, 1.0, 0.0);

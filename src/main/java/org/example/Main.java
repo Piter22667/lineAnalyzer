@@ -46,7 +46,7 @@ public class Main {
                 return Line.fromSlopeAndIntercept(numbers[0], numbers[1]);
 
             } catch (NumberFormatException e) {
-                printErrorAndSolutionMessages("Введено текст або нерозпізнані символи замість числа.", "Будь ласка, введіть 4 числа через пробіл.");
+                printErrorAndSolutionMessages("Введено текст або нерозпізнані символи замість числа.", "Будь ласка, введіть 2 числа через пробіл.");
             } catch (IllegalArgumentException e) {
                 printErrorAndSolutionMessages(e.getMessage(), "Перевірте правильність введених даних і спробуйте ще раз.");
             }
